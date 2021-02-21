@@ -7,12 +7,9 @@ namespace Conditional_Powerpoint_Problem
         static void Main(string[] args)
         {
             string answer;
-
+        
             do
             {
-
-            
-
              Console.WriteLine($"Please enter the # of miles >>");
              answer = Console.ReadLine();
              //double miles = Convert.ToDouble(answer);
@@ -30,7 +27,6 @@ namespace Conditional_Powerpoint_Problem
              answer = Console.ReadLine();
              //double miles = Convert.ToDouble(answer);
              double weight;
-             bool isSuccessful = double.TryParse(answer, out miles);
 
              if (double.TryParse(answer, out weight) == false)
              {
@@ -55,7 +51,7 @@ namespace Conditional_Powerpoint_Problem
              double netTotal = quote + hazardousCost;
 
              double discount = 0;
-             if (miles < 150 && weight >500)
+             if (miles < 150 && weight > 500)
              {
                 discount = 0.10 * netTotal;
              }
@@ -74,6 +70,8 @@ namespace Conditional_Powerpoint_Problem
              Console.ForegroundColor = ConsoleColor.White;
              Console.WriteLine($"Total: \t{total.ToString("C")}");
 
+                Console.WriteLine("would you like to run this again >>");
+                answer = Console.ReadLine();
             } while (answer.ToLower() == "yes");
 
             Console.WriteLine("\n\nGoodbye");
